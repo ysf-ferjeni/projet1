@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DriveEasy — Location de voiture en Tunisie</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <div class="top-bark">
+    <div class="container d-flex justify-content-end align-items-center gap-4">
+      <span><i class="bi bi-telephone-fill text-dark"></i> (+216) 27 559 834</span>
+      <span><i class="bi bi-envelope-fill text-dark"></i> contact@driveeasy.com</span>
+    </div>
+  </div>
+
+  <nav class="navbar navbar-expand-lg navbar-light bg-white py-3 shadow-sm sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">Drive<span>Easy</span></a>
+
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link active" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link" href="voitures.html">Véhicules</a></li>
+          <li class="nav-item"><a class="nav-link" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link" href="admin.html">Admin</a></li>
+        </ul>
+        <div style="display: flex; align-items: center; gap: 10px;">
+          <div >
+            <a href="login.html" class="cnct" style="display: flex; align-items: center; gap: 5px; text-decoration: none; color: #000; border: 1px solid #000; padding: 5px 10px; border-radius: 5px;"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-person-fill" viewBox="0 0 16 16">
+  <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+</svg>Connexion  </a>
+          </div>
+          <a href="reservation.html" class="btn btn-warning text-dark fw-bold btn-sm">Réserver</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div class="hero-banner">
+    <img src="images/slide1.webp" alt="DriveEasy Location de voiture" class="hero-banner-img">
+    <div class="hero-banner-content text-center text-white">
+      <div class="container">
+        <h1>Louez la voiture idéale</h1>
+        <p class="lead mb-0">Des prix imbattables, une flotte récente et une réservation en 2 minutes.</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="container" style="position: relative; z-index: 20;">
+    <div class="booking-widget">
+      <form action="voitures.html" class="row g-2 align-items-end">
+        <div class="col-12 col-md-3">
+          <label class="form-label text-dark small fw-bold">Lieu de prise en charge</label>
+          <select class="form-select">
+            <option>Béja - Agence</option>
+            <option>Tunis - Aéroport</option>
+            <option>Tunis - Centre</option>
+            <option>Sousse</option>
+          </select>
+        </div>
+        <div class="col-12 col-md-3">
+          <label class="form-label text-dark small fw-bold">Date de départ</label>
+          <input type="date" id="widgetDateDepart" class="form-control" required>
+        </div>
+        <div class="col-12 col-md-3">
+          <label class="form-label text-dark small fw-bold">Date de retour</label>
+          <input type="date" id="widgetDateRetour" class="form-control" required>
+        </div>
+        <div class="col-12 col-md-3 mt-3 mt-md-0">
+          <button type="submit" class="btn btn-warning w-100 fw-bold py-2">Trouver un véhicule</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div style="background-color: #f8f9fa; padding: 40px 0;">
+    <div class="container">
+      <div class="row justify-content-center align-items-center g-3">
+        <div class="col-12 col-md-4 text-center border-end-md">
+          <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-geo-alt-fill text-warning"></i> Agence Béja</h5>
+          <p class="text-muted small mb-0">Rue 18 Janvier, Béja 9000</p>
+        </div>
+        <div class="col-12 col-md-4 text-center">
+          <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-clock-fill text-warning"></i> Horaires</h5>
+          <p class="text-muted small mb-0">Lun - Sam : 08h00 à 19h00</p>
+        </div>
+        <div class="col-12 col-md-4 text-center border-start-md">
+          <h5 class="fw-bold mb-0 text-dark"><i class="bi bi-shield-check text-warning"></i> Agence agréée</h5>
+          <p class="text-muted small mb-0">Véhicules assurés et révisés</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <section class="reassurance-section bg-white">
+    <div class="container">
+      <div class="row text-center g-4">
+        <div class="col-6 col-md-3">
+          <i class="bi bi-headset reassurance-icon"></i>
+          <h6 class="fw-bold mt-2">Assistance client</h6>
+          <p class="small text-muted">Une équipe à votre écoute</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-shield-check reassurance-icon"></i>
+          <h6 class="fw-bold mt-2">Annulation gratuite</h6>
+          <p class="small text-muted">Paiement à l'arrivée</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-tag reassurance-icon"></i>
+          <h6 class="fw-bold mt-2">Prix transparents</h6>
+          <p class="small text-muted">Pas de frais cachés</p>
+        </div>
+        <div class="col-6 col-md-3">
+          <i class="bi bi-credit-card reassurance-icon"></i>
+          <h6 class="fw-bold mt-2">Paiement sécurisé</h6>
+          <p class="small text-muted">Le prix affiché est le prix payé</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5 bg-light">
+    <div class="container">
+      <div class="text-center mb-5">
+        <h2 class="fw-bold">Nos <span class="text-warning">voitures populaires</span></h2>
+        <p class="text-muted">Découvrez notre sélection de véhicules pour vos trajets.</p>
+      </div>
+      <div class="vtr">
+        <div>
+          
+        </div>
+<div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/seat_leon.jpg" class="card-img-top" alt="Seat Leon">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Seat Leon</h4>
+                    <p class="card-text flex-grow-1">Berline compacte, boîte automatique, toit panoramique. Confort haut de gamme.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (75 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+       
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/vw_virtus.jpg" class="card-img-top" alt="Volkswagen Virtus">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Volkswagen Virtus</h4>
+                    <p class="card-text flex-grow-1">Berline grise, très spacieuse et confortable. Moteur puissant et sécurisant.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (80 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+       
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/skoda_slavia.jpg" class="card-img-top" alt="Skoda Slavia">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Skoda Slavia</h4>
+                    <p class="card-text flex-grow-1">Couleur orange vif, finition élégante. Une berline moderne et attrayante.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (85 DT/j)</a>
+                </div>
+            </section>
+        </div>
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/mercedes_cla.jpg" class="card-img-top" alt="Mercedes CLA">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Mercedes CLA</h4>
+                    <p class="card-text flex-grow-1">Voiture de prestige pour les occasions spéciales. Luxe, confort et performance.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (150 DT/j)</a>
+                </div>
+            </section>
+        </div>
+      </div>
+      
+      <div class="row g-4" id="carsHome"></div>
+      <div class="text-center mt-5">
+        <a href="voitures.html" class="btn btn-outline-dark btn-lg px-5">Voir tout le catalogue</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-5">
+    <div class="container text-center">
+      <h3 class="fw-bold">Documents utiles</h3>
+      <p class="text-muted mb-4">Téléchargez notre guide pour tout savoir sur nos conditions.</p>
+      <a href="docs/VAGA_RENT_guide_tarifaire.pdf" download="DriveEasy_Guide_Tarifaire.pdf" class="btn btn-warning fw-bold m-2 px-4 py-2">
+        <i class="bi bi-file-earmark-pdf"></i> Télécharger le guide tarifaire
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-dark text-white pt-5 pb-3">
+    <div class="container">
+      <div class="row g-4 mb-4 text-center text-md-start">
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold text-warning">DriveEasy</h5>
+          <p class="small text-light opacity-75 mt-3">Votre partenaire de confiance pour la location de voitures en Tunisie depuis 2026.</p>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold">Liens rapides</h5>
+          <ul class="list-unstyled small mt-3">
+            <li><a href="index.html" class="text-light text-decoration-none opacity-75">Accueil</a></li>
+            <li><a href="voitures.html" class="text-light text-decoration-none opacity-75">Catalogue</a></li>
+            <li><a href="contact.html" class="text-light text-decoration-none opacity-75">Contact</a></li>
+            <li><a href="admin.html" class="text-light text-decoration-none opacity-75">Administration</a></li>
+          </ul>
+        </div>
+        <div class="col-12 col-md-4">
+          <h5 class="fw-bold">Contact</h5>
+          <ul class="list-unstyled small mt-3 text-light opacity-75">
+            <li><i class="bi bi-telephone"></i> +216 27 559 834</li>
+            <li><i class="bi bi-envelope"></i> contact@driveeasy.com</li>
+            <li><i class="bi bi-geo-alt"></i> Rue 18 Janvier, Béja</li>
+          </ul>
+        </div>
+            <div style=" text-align: center;  background-color: rgb(67, 38, 199); border: 1px solid gray;
+            border-radius: 15px;">
+   
+ <ul>
+  <li><h4 style="color: black;">DEVELOPPEURS</h4></li>
+  <li>YOUSSEF FERJANI</li>
+  <li>MOHAMMED KOUKI</li>
+  <li>...............</li>
+ </ul>
+</div>
+      </div>
+      <div class="text-center border-top border-secondary pt-3 small opacity-50">
+        © 2026 DriveEasy 
+      </div>
+      <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 5px;">
+         <p><svg style="color: blue;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg>   driveeasy </p>
+<p style="margin-left: 10px;"><svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>  drive-easy </p>
+      </div>
+    </div>
+
+  </footer>
+</body>
+</html>

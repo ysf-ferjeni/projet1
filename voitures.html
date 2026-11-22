@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catalogue des véhicules — DriveEasy</title>
+  <link rel="stylesheet" href="css/style.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+<body>
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-dark py-3">
+    <div class="container">
+      <a class="navbar-brand text-warning" href="index.html">Drive<span class="text-white">Easy</span></a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navVoitures">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navVoitures">
+        <ul class="navbar-nav mx-auto">
+          <li class="nav-item"><a class="nav-link text-white" href="index.html">Accueil</a></li>
+          <li class="nav-item"><a class="nav-link active text-warning" href="voitures.html">Véhicules</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="contact.html">Contact</a></li>
+          <li class="nav-item"><a class="nav-link text-white" href="admin.html">Admin</a></li>
+        </ul>
+        <div class="d-flex align-items-center gap-2 mt-3 mt-lg-0">
+          <div id="authLink" class="text-white">
+            <a href="login.html" class="btn btn-outline-light btn-sm">Connexion</a>
+          </div>
+          <a href="reservation.html" class="btn btn-warning btn-sm fw-bold">Réservations</a>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <div  class="ctn-voi" >
+    <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:20px;">
+      <div>
+        <h1 class="fw-bold mb-1">Catalogue de nos véhicules</h1>
+        <p class="text-muted mb-0">Trouvez le véhicule parfait pour vos déplacements en Tunisie.</p>
+      </div>
+      <a href="reservation.html" class="btn btn-warning fw-bold">Faire une réservation</a>
+    </div>
+
+    <div class="row mb-4 g-3 bg-light p-3 rounded shadow-sm">
+      <div class="">
+        <label class="form-label small fw-bold">   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+  <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+</svg>      Recherche par nom ou marque</label>
+        <input type="text" id="search" class="form-control" placeholder="Ex: Clio, Hyundai, SUV...">
+      </div>
+    
+
+        <div class="col-12 col-md-4">
+        <label class="form-label small fw-bold">  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bricks" viewBox="0 0 16 16">
+  <path d="M0 .5A.5.5 0 0 1 .5 0h15a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H14v2h1.5a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-.5.5H.5a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 1 .5-.5H2v-2H.5a.5.5 0 0 1-.5-.5v-3A.5.5 0 0 1 .5 6H2V4H.5a.5.5 0 0 1-.5-.5zM3 4v2h4.5V4zm5.5 0v2H13V4zM3 10v2h4.5v-2zm5.5 0v2H13v-2zM1 1v2h3.5V1zm4.5 0v2h5V1zm6 0v2H15V1zM1 7v2h3.5V7zm4.5 0v2h5V7zm6 0v2H15V7zM1 13v2h3.5v-2zm4.5 0v2h5v-2zm6 0v2H15v-2z"/>
+</svg>    Catégorie</label>
+        <select id="filterCat" class="form-select">
+          <option value="">Toutes catégories</option>
+          <option value="Citadine">Citadine</option>
+          <option value="Compacte">Compacte</option>
+          <option value="SUV">SUV</option>
+          <option value="Économique">Économique</option>
+        </select>
+      </div>
+      <div class="col-12 col-md-4">
+        <label class="form-label small fw-bold">   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-cash-stack" viewBox="0 0 16 16">
+  <path d="M1 3a1 1 0 0 1 1-1h12a1 1 0 0 1 1 1zm7 8a2 2 0 1 0 0-4 2 2 0 0 0 0 4"/>
+  <path d="M0 5a1 1 0 0 1 1-1h14a1 1 0 0 1 1 1v8a1 1 0 0 1-1 1H1a1 1 0 0 1-1-1zm3 0a2 2 0 0 1-2 2v4a2 2 0 0 1 2 2h10a2 2 0 0 1 2-2V7a2 2 0 0 1-2-2z"/>
+</svg>    Prix maximum (DT / jour)</label>
+        <input type="number" id="maxPrice" class="form-control" placeholder="Ex: 100" min="0" step="10">
+      </div>
+      
+      
+    </div>
+<div class="card-voitures">
+</head>
+<body class="bg-light">
+
+<div class="container py-5">
+    <h2 class="text-center mb-5">Nos Véhicules de Location</h2>
+    
+    <div class="row">
+
+    
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/clio4.jpg" class="card-img-top" alt="Renault Clio 4">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Renault Clio 4</h4>
+                    <p class="card-text flex-grow-1">Citadine noire, économique et parfaite pour la ville. Climatisation et Bluetooth inclus.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (45 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/fiat500.jpg" class="card-img-top" alt="Fiat 500">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Fiat 500</h4>
+                    <p class="card-text flex-grow-1">Voiture blanche avec toit panoramique. Idéale pour les couples, style vintage et moderne.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (50 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+  
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/hyundai_grand_i10.jpg" class="card-img-top" alt="Hyundai Grand i10">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Hyundai Grand i10</h4>
+                    <p class="card-text flex-grow-1">Compacte et maniable. Parfaite pour les trajets quotidiens. Faible consommation.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (40 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+   
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/hyundai_i20.jpg" class="card-img-top" alt="Hyundai i20">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Hyundai i20 (2023)</h4>
+                    <p class="card-text flex-grow-1">Design sportif en bleu, écran tactile, caméra de recul. Très confortable.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (55 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/seat_ibiza.jpg" class="card-img-top" alt="Seat Ibiza">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Seat Ibiza</h4>
+                    <p class="card-text flex-grow-1">Finition FR, boîte manuelle, toit ouvrant. Une voiture dynamique et élégante.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (60 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+    
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/kia_rio.jpg" class="card-img-top" alt="Kia Rio">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Kia Rio</h4>
+                    <p class="card-text flex-grow-1">Voiture blanche, jantes alliage, régulateur de vitesse. Idéale pour les longs trajets.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (50 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+     
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/mahindra_kuv100.jpg" class="card-img-top" alt="Mahindra KUV100">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Mahindra KUV100</h4>
+                    <p class="card-text flex-grow-1">Mini SUV robuste. Position de conduite surélevée. Parfait pour la ville et la campagne.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (45 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+      
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/skoda_fabia.jpg" class="card-img-top" alt="Skoda Fabia">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Skoda Fabia</h4>
+                    <p class="card-text flex-grow-1">Spacieuse pour sa catégorie, coffre généreux, très fiable. Blanche et sobre.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (45 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+      
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/seat_leon.jpg" class="card-img-top" alt="Seat Leon">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Seat Leon</h4>
+                    <p class="card-text flex-grow-1">Berline compacte, boîte automatique, toit panoramique. Confort haut de gamme.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (75 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+       
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/vw_virtus.jpg" class="card-img-top" alt="Volkswagen Virtus">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Volkswagen Virtus</h4>
+                    <p class="card-text flex-grow-1">Berline grise, très spacieuse et confortable. Moteur puissant et sécurisant.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (80 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+       
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/skoda_slavia.jpg" class="card-img-top" alt="Skoda Slavia">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Skoda Slavia</h4>
+                    <p class="card-text flex-grow-1">Couleur orange vif, finition élégante. Une berline moderne et attrayante.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (85 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/renault_trafic.jpg" class="card-img-top" alt="Renault Trafic">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Renault Trafic</h4>
+                    <p class="card-text flex-grow-1">Utilitaire 9 places, idéal pour les groupes ou les familles. Grande capacité de bagages.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (100 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/suzuki_dzire.jpg" class="card-img-top" alt="Suzuki Dzire">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Suzuki Dzire</h4>
+                    <p class="card-text flex-grow-1">Berline compacte très économique en carburant. Parfaite pour les longs trajets.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (50 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/kia_sportage.jpg" class="card-img-top" alt="Kia Sportage">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Kia Sportage</h4>
+                    <p class="card-text flex-grow-1">SUV familial blanc. Grand espace intérieur, idéal pour les vacances et la route.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (90 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/chery_tiggo.jpg" class="card-img-top" alt="Chery Tiggo 2">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Chery Tiggo 2</h4>
+                    <p class="card-text flex-grow-1">Petit SUV blanc, très maniable, idéal pour découvrir la région à petit prix.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (60 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+        <div class="col-md-6 col-lg-3 mb-4">
+            <section class="card h-100 shadow-sm">
+                <img src="images/mercedes_cla.jpg" class="card-img-top" alt="Mercedes CLA">
+                <div class="card-body d-flex flex-column">
+                    <h4 class="card-title">Mercedes CLA</h4>
+                    <p class="card-text flex-grow-1">Voiture de prestige pour les occasions spéciales. Luxe, confort et performance.</p>
+                    <a href="#" class="btn-solid theme-primary mt-auto w-100">Réserver (150 DT/j)</a>
+                </div>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+</div>
+  </div>
+
+  <div class="container mb-5">
+    <a href="index.html" class="btn btn-outline-secondary">← Retour à l'accueil</a>
+  </div>
+
+  <footer class="bg-dark text-white pt-4 pb-3">
+    <div class="container text-center small opacity-75">
+      © 2026 DriveEasy — Location de voiture en Tunisie.
+    </div>
+    <div style="display: flex; justify-content: center; align-items: center; gap: 10px; margin-top: 5px;">
+         <p><svg style="color: blue;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-facebook" viewBox="0 0 16 16">
+  <path d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951"/>
+</svg>   driveeasy </p>
+<p style="margin-left: 10px;"><svg style="color: red;" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-instagram" viewBox="0 0 16 16">
+  <path d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334"/>
+</svg>  drive-easy </p>
+
+      </div>
+  
+  </footer>
+</body>
+</html>
