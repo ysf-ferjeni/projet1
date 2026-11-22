@@ -1,0 +1,215 @@
+body {
+  font-family: 'Segoe UI', sans-serif;
+  color: #333;
+}
+
+.navbar-brand {
+  font-size: 1.6rem;
+  font-weight: 900;
+  color: #ff9800 !important;
+}
+
+.navbar-brand span {
+  color: #0d6efd;
+}
+
+.nav-link {
+  font-weight: 500;
+}
+
+.top-bar {
+  background-color: #f8f9fa;
+  font-size: 0.9rem;
+  padding: 8px 0;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.hero-banner {
+  position: relative;
+  height: 55vh;
+  min-height: 380px;
+  background-color: #000;
+  overflow: hidden;
+}
+
+.hero-banner-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.6;
+}
+
+.hero-banner-content {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  padding: 0 15px;
+}
+
+.hero-banner-content h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+@media (min-width: 768px) {
+  .hero-banner-content h1 {
+    font-size: 3.2rem;
+  }
+}
+
+.booking-widget {
+  background: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+  margin-top: 20px;
+  z-index: 10;
+}
+.btn-solid.theme-primary {
+  
+  display: block;
+  width: 100%;
+  background-color: #ff9800;
+  color: rgb(0, 0, 0);
+  border: none;
+  padding: 10px 16px;
+  border-radius: 5px;
+  text-decoration: none;
+  text-align: center;
+  font-weight: bold;
+  transition: background-color 0.3s;
+  }
+      
+.card-img-top {
+    height: 180px;
+    object-fit: cover;
+  }
+@media (min-width: 992px) {
+  .booking-widget {
+    margin-top: -50px;
+  }
+}
+
+.company-info {
+  background-color: #f8f9fa;
+  border-bottom: 1px solid #eaeaea;
+  padding: 20px 0;
+}
+
+@media (min-width: 768px) {
+  .border-end-md {
+    border-right: 1px solid #dee2e6;
+  }
+  .border-start-md {
+    border-left: 1px solid #dee2e6;
+  }
+}
+
+.reassurance-section {
+  padding: 40px 0;
+}
+
+.reassurance-icon {
+  font-size: 2rem;
+  color: #0073ff;
+}
+
+.card {
+  transition: transform .3s, box-shadow .3s;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12) ;
+}
+.phrase-ctc {
+  text-align: center;
+  margin-bottom: 30px;
+}
+.contenair {
+  margin-top: 40px;
+}
+.msg {
+  margin-left: 350px;
+}
+.env-msg {
+  text-align: center;
+  margin-bottom: 20px;
+}
+.card-msg {
+  padding: 20px;
+  border: 1px solid #a5a4a4;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px black ;
+}
+.card-msg:hover{
+  transform: translateY(-5px);
+  
+}
+.card-log {
+  padding: 50px;
+  border: 1px solid #a5a4a4;
+  border-radius: 8px;
+  box-shadow: 0 8px 10px black ;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.card-log:hover{
+  transform: translateY(-5px);
+  
+}
+.ctn-voi{
+  margin-top:40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.contnr-reserv{
+  margin-top:40px;
+  margin-left: 20px;
+  margin-right: 20px;
+}
+#resForm {
+  
+  padding: 20px;
+  border-radius: 8px;
+
+}
+.contnr-reserv{
+  margin-top:40px;
+  margin-left: 200px;
+  margin-right:200px;
+  border-radius: 8px;
+  box-shadow: 0 8px 20px black;
+  border: 1px solid #a5a4a4;
+}
+.contnr-reserv:hover{
+  transform: translateY(-5px);
+  
+}
+.phrase{
+  margin-top: 20px;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.card-voitures{
+  padding: 5px 5px 5px 5px;
+ box-shadow: 0 8px 20px black;
+  border: 1px solid #a5a4a4;
+  border-radius: 10px;
+  margin: 10px;
+  width: max-content;
+  margin-left: 70px;
+}
+.vtr{
+  gap: 5px;
+  display: flex;
+padding-top: 20px;
+
+}
